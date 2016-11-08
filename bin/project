@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+const minimist = require('minimist')
+
+const save = require('./actions/save')
+const init = require('./actions/init')
+const list = require('./actions/list')
+const help = require('./actions/help')
+const setup = require('./actions/setup')
+
+const flags = minimist(process.argv.slice(2))
+const args = flags._
+
+function cli() {
+  setup()
+  if (args.length === 0) return help()
+
+  switch (args.shift()) {
+    case 'save': save(args, flags); break;
+    case 'init': init(args, flags); break;
+    case 'list': list(args, flags); break;
+    default: help();
+  }
+}
+
+cli()
