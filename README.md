@@ -5,14 +5,16 @@
 ## Installation
 
 ```sh
-$ npm install --save project
+$ npm install -g seanc/project
 ```
 
 ## Usage
 
-```js
-var project = require('project');
-project();
+```sh
+$ project save <name> [target]
+$ project init <template name> [target] [template properties...]
+$ project remove <template name>
+$ project list
 ```
 
 ## License
