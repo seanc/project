@@ -1,5 +1,5 @@
 const compress = require('targz').compress
-const path = require('path').join
+const path = require('path')
 const homedir = require('os').homedir
 const fs = require('fs')
 
@@ -8,15 +8,18 @@ function save(args, flags) {
 
   const name = args[0]
   const target = args[1] || process.cwd()
-  const store = join(homedir(), '.project')
+  const store = path.join(homedir(), '.project')
   const tar = path.join(store, `${name}.tar.gz`)
 
   fs.exists(tar, file => {
-    if (file) return console.log(`project ${name} already exists`)
+    if (file) {
+      console.log(`template ${name} already exists`)
+      process.exit(0)
+    }
 
-    compress({ src: target, dest: join(store, tar) }, err => {
+    compress({ src: target, dest: tar }, err => {
       if (err) throw err
-      console.log(`Created new template ${name} from ${target}`)
+      console.log(`created new template ${name} from ${target}`)
     })
   })
 }

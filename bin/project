@@ -4,12 +4,16 @@ const minimist = require('minimist')
 
 const save = require('./actions/save')
 const init = require('./actions/init')
+const remove = require('./actions/remove')
+const rename = require('./actions/rename')
 const list = require('./actions/list')
 const help = require('./actions/help')
 const setup = require('./actions/setup')
 
 const flags = minimist(process.argv.slice(2))
 const args = flags._
+
+delete flags._
 
 function cli() {
   setup()
@@ -18,6 +22,7 @@ function cli() {
   switch (args.shift()) {
     case 'save': save(args, flags); break;
     case 'init': init(args, flags); break;
+    case 'remove': remove(args, flags); break;
     case 'list': list(args, flags); break;
     default: help();
   }

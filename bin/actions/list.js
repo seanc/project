@@ -7,8 +7,8 @@ function list(args, flags) {
 
   glob(path.join(store, '**', '*.tar.gz'), (err, files) => {
     if (err) throw err
-
-    console.log(files.map(file => path.basename(file)).join(', '))
+    const templates = files.map(file => path.basename(file, '.tar.gz')).join(', ')
+    console.log(templates ? templates : 'no templates created')
   })
 }
 

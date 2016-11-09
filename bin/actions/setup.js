@@ -16,7 +16,7 @@ function setup() {
       Thanks for installing project.
       You will only see this message once.
       I am currently creating the necessary directories and files
-      for me to store projects.
+      for me to store templates.
     `);
 
     fs.mkdir(store, err => {

@@ -5,6 +5,7 @@ function help() {
   Usage:
     project save <name> [target]
     project init <template name> [target] [template properties...]
+    project remove <template name>
     project list
   `)
 }
