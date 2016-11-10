@@ -20,7 +20,7 @@ function init(args, flags) {
         { option: 'n', aliases: ['no'] }
       ], answer => {
         if (answer.y) write(name, target, flags)
-        else console.log('Aborted')
+        else console.log('Aborted'); process.exit(0)
       })
     }
 
@@ -45,6 +45,7 @@ function write(name, target, flags) {
   }, err => {
     if (err) return console.log(err)
     console.log(`created project ${path.basename(target)} from ${name}`)
+    process.exit(0)
   })
 }
 

@@ -23,6 +23,7 @@ function setup() {
       if (err) throw err;
 
       console.log(`Created ${store}`)
+      process.exit(0)
     })
   })
 }

@@ -15,7 +15,10 @@ function remove(args, flags) {
     }
 
     trash([tar])
-    .then(() => console.log(`template ${name} removed`))
+    .then(() => {
+      console.log(`template ${name} removed`)
+      process.exit(0)
+    })
     .catch(err => console.log(err))
   })
 }

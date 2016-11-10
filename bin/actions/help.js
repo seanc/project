@@ -8,6 +8,7 @@ function help() {
     project remove <template name>
     project list
   `)
+  process.exit(0)
 }
 
 module.exports = help
