@@ -9,6 +9,7 @@ function list(args, flags) {
     if (err) throw err
     const templates = files.map(file => path.basename(file, '.tar.gz')).join(', ')
     console.log(templates ? templates : 'no templates created')
+    process.exit(0)
   })
 }
 

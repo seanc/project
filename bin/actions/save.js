@@ -20,6 +20,7 @@ function save(args, flags) {
     compress({ src: target, dest: tar }, err => {
       if (err) throw err
       console.log(`created new template ${name} from ${target}`)
+      process.exit(0)
     })
   })
 }
