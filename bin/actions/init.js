@@ -19,8 +19,12 @@ function init(args, flags) {
         { option: 'y', aliases: ['yes'] },
         { option: 'n', aliases: ['no'] }
       ], answer => {
-        if (answer.y) write(name, target, flags)
-        else console.log('Aborted'); process.exit(0)
+        if (answer.y) {
+          write(name, target, flags)
+        } else {
+          console.log('Aborted')
+          process.exit(0)
+        }
       })
     }
 
