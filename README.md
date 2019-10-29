@@ -16,10 +16,17 @@ $ npm install -g seanc/project
 ## Usage
 
 ```sh
-$ project save <template name> [target directory] # Create a template from a directory. Recursively copies structure.
-$ project init <template name> [target] [template options... | ex. --url https://example.com] # Use a template. Initializes a copy of template completed with inputted template options
-$ project remove <template name> # Remove a template
-$ project list # List templates
+# Create a template from a directory. Recursively copies structure.
+$ project save <template name> [target directory] 
+
+# Use a template. Initializes a copy of template completed with inputted template options
+$ project init <template name> [target] [template options... | ex. --url https://example.com]
+
+# Remove a template
+$ project remove <template name>
+
+# List templates
+$ project list
 ```
 
 ## Notes
