@@ -28,7 +28,7 @@
     "dedent": "^0.6.0",
     "each-async": "^1.1.1",
     "glob": "^7.1.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "mv": "^2.1.1",
     "pixie": "^0.2.2",
     "randomstring": "^1.1.5",
